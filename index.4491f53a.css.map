@@ -1,0 +1,1 @@
+{"mappings":"ACAA,kBAIA","sources":["index.4491f53a.css","src/styles/styles.css"],"sourcesContent":[".title {\n  color: #00f;\n}\n\n.nav {\n  display: flex;\n}\n\n/*# sourceMappingURL=index.4491f53a.css.map */\n",".title {\n    color: blue;\n}\n\n.nav {\n    display: flex;\n}"],"names":[],"version":3,"file":"index.4491f53a.css.map"}
