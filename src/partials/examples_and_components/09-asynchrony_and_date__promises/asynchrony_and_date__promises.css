@@ -1,3 +1,39 @@
+/* ! Base styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, 
+ol,
+p {
+  margin: 0px;
+}
+
+
+li {
+  /* list-style: circle; */
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  /* background-color: rgb(225, 245, 255); */
+}
+
+.section {
+  background-color: rgb(255, 255, 240);
+  padding: 5px 20px;
+  outline: 1px solid lightblue;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* ! */
+
 .title {
   color: royalblue;
 }
@@ -5,6 +41,9 @@
 .nav {
   display: flex;
 }
+
+
+
 
 /* ! Notification */
 
@@ -79,3 +118,87 @@
 .timer-btn.is-active {
   background-color: #2196f3;
 }
+
+/* ! Clock Rysich */
+.clock {
+  width: 550px;
+  height: 550px;
+  padding-bottom: 7px;
+  /* padding-left: 10px; */
+  /* background-image: url(https://i.ibb.co/dBGxSK1/hiclipart-com-3.png); */
+  background-image: url(../../../images/clock5.jpg);
+
+  background-color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+  left: 550px;
+}
+.clock-arrow{
+  position: absolute;
+  background-color: black;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.clock-center {
+  position: absolute;  
+  background-color: black;
+  top: 268px;
+  left: 268px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.clock-seconds__arrow {
+  bottom: 50%;
+  left: 50%;
+  width: 5px;
+  height: 33%;
+  /* background-color: gray; */
+}
+.clock-minutes__arrow {
+  bottom: 50%;
+  left: 50%;
+  width: 7px;
+  height: 29%;
+}
+.clock-hours__arrow {
+  bottom: 50%;
+  left: 50%;
+  width: 12px;
+  height: 22%;
+}
+.date{
+  width: 100px;
+  height: 100px;
+  color: black;
+}
+.calendar {
+  display: flex;
+  justify-content: space-between;
+}
+.date-style {
+  display: flex;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: 3px 3px 2px #CECBCD;
+}
+.digital-clock{
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 3px 3px 2px #CECBCD;
+}
+
+
+
+
+
+/* .box{
+  display: none;
+  width:200px;
+  height: 200px;
+  border: 1px black solid;
+} */
+/* ! */
