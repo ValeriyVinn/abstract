@@ -1,6 +1,5 @@
 // import BSN from 'bootstrap.native';
 
-
 //! Notification ------------
 
 const NOTIFICATION_DELAY = 5000;
@@ -12,11 +11,8 @@ const refsNotification = {
 };
 
 refsNotification.notification.addEventListener('click', onNotificationClick);
-refsNotification.btn.addEventListener('click', onBtnClick);
+refsNotification.btn.addEventListener('click', showNotification);
 
-function onBtnClick() {
-  showNotification();
-}
 
 function onNotificationClick() {
   hideNotification();
@@ -35,6 +31,7 @@ function showNotification() {
 function hideNotification() {
   refsNotification.notification.classList.remove('is-visible');
 }
+
 
 //! Annoying ------------------
 
@@ -124,7 +121,7 @@ class Timer {
    */
   getTimeComponents(time) {
     const hours = this.pad(
-      Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     );
     const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
@@ -218,38 +215,38 @@ function updateClockface({ hours, mins, secs }) {
 //   box.style.display = "none";
 // }
 
-const day = document.querySelector(".date-day");
-const date = document.querySelector(".date");
-const month = document.querySelector(".date-month");
-const year = document.querySelector(".date-year");
-const digitalClock = document.querySelector(".digital-clock");
-const arrowSecond = document.querySelector(".clock-seconds__arrow");
-const arrowMinutes = document.querySelector(".clock-minutes__arrow");
-const arrowHours = document.querySelector(".clock-hours__arrow");
+const day = document.querySelector('.date-day');
+const date = document.querySelector('.date');
+const month = document.querySelector('.date-month');
+const year = document.querySelector('.date-year');
+const digitalClock = document.querySelector('.digital-clock');
+const arrowSecond = document.querySelector('.clock-seconds__arrow');
+const arrowMinutes = document.querySelector('.clock-minutes__arrow');
+const arrowHours = document.querySelector('.clock-hours__arrow');
 
 const namesOfMonth = [
-  "Січень",
-  "Лютий",
-  "Березень",
-  "Квітень",
-  "Травень",
-  "Червень",
-  "Липень",
-  "Серпень",
-  "Вересень",
-  "Жовтень",
-  "Листопад",
-  "Грудень",
+  'Січень',
+  'Лютий',
+  'Березень',
+  'Квітень',
+  'Травень',
+  'Червень',
+  'Липень',
+  'Серпень',
+  'Вересень',
+  'Жовтень',
+  'Листопад',
+  'Грудень',
 ];
 
 const arrDay = [
-  "Неділя",
-  "Понеділок",
-  "Вівторок",
-  "Середа",
-  "Четвер",
-  "П`ятниця",
-  "Субота",
+  'Неділя',
+  'Понеділок',
+  'Вівторок',
+  'Середа',
+  'Четвер',
+  'П`ятниця',
+  'Субота',
 ];
 
 setInterval(() => {
@@ -264,14 +261,15 @@ setInterval(() => {
 
   const changeSeconds = (360 / 60) * currentSeconds;
   const changeMinutes = (360 / 60) * currentMinutes;
-  const changeHours =(360 / 12) * currentHour + (360 / 12 / 60) * currentMinutes;
+  const changeHours =
+    (360 / 12) * currentHour + (360 / 12 / 60) * currentMinutes;
 
-  console.log(changeSeconds);
+  // console.log(changeSeconds);
   const formatTime = `${currentHour
     .toString()
-    .padStart(2, "0")} : ${currentMinutes
+    .padStart(2, '0')} : ${currentMinutes
     .toString()
-    .padStart(2, "0")} : ${currentSeconds.toString().padStart(2, "0")}`;
+    .padStart(2, '0')} : ${currentSeconds.toString().padStart(2, '0')}`;
 
   day.textContent = currentDay;
   date.textContent = currentDate;
@@ -289,7 +287,6 @@ setInterval(() => {
 
 // const currentTime = new Date();
 
-
 // const targetDate = new Date('4/11/2023')
 
 // setInterval(()=>{
@@ -298,14 +295,13 @@ setInterval(() => {
 //     console.log(convertMs(targetDate - currentDate));
 // },1000)
 
-
 // function convertMs(ms) {
 //     // Number of milliseconds per unit of time
 //     const second = 1000;
 //     const minute = second * 60;
 //     const hour = minute * 60;
 //     const day = hour * 24;
-  
+
 //     // Remaining days
 //     const days = Math.floor(ms / day);
 //     // Remaining hours
@@ -314,7 +310,7 @@ setInterval(() => {
 //     const minutes = Math.floor(((ms % day) % hour) / minute);
 //     // Remaining seconds
 //     const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-  
+
 //     return { days, hours, minutes, seconds };
 //   }
 

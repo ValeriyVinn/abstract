@@ -87,23 +87,33 @@
           <!--! Notification -->
           <h3>Notification</h3>
           <h4>Завдання</h4>
-          <p>Зробити нотифікашку, яка, при кліку на кнопку з'являлась би на певний час, і потім зникала</p>
+          <p>
+            Зробити нотифікашку, яка, при кліку на кнопку з'являлась би на
+            певний час, і потім зникала
+          </p>
           <h4>Логіка рішення</h4>
           <ol>
-            <li>Ініціалізуємо змінні для затримки setTimeout'a і для очистки timeoutId</li>
+            <li>
+              Ініціалізуємо змінні для затримки setTimeout'a і для очистки
+              timeoutId
+            </li>
             <li>Беремо посилання на html-розмітку</li>
             <li>Вішаємо на нього слухача подій</li>
-            <li>Пишемо дві функції: показати нотифікашку і приховати нотифікашку.</li>
+            <li>
+              Пишемо дві функції: показати нотифікашку і приховати нотифікашку.
+            </li>
             <li>Викликаємо функцію показати нотифікашку</li>
-            <li>В функцію показати нотифікашку додаємо клас is-visible. Також додаємо функцію приховати нотифікашку, обернену в setTimeout</li>
-            <li>В функції приховати нотифікашку ми прибираємо клас is-visible</li>
+            <li>
+              В функцію показати нотифікашку додаємо клас is-visible. Також
+              додаємо функцію приховати нотифікашку, обернену в setTimeout
+            </li>
+            <li>
+              В функції приховати нотифікашку ми прибираємо клас is-visible
+            </li>
             <li>В функції кліка на нотифікашку відміняємо setTimeout</li>
-            
           </ol>
 
-          <p class="alert success js-alert">
-            Операція була виконана успішно
-          </p>
+          <p class="alert success js-alert">Операція була виконана успішно</p>
           <button class="notification" type="button">Нотифікашка</button>
         </div>
         <div class="section">
@@ -141,6 +151,47 @@
         <div class="section">
           <!--! Timer Repeta-->
           <h3>Timer Repeta</h3>
+          <h4>Завдання</h4>
+          <p>Зробити таймер</p>
+          <h4>Логіка рішення</h4>
+          <ol>
+            <li>
+              В змінну refs кладемо об'єкт з посиланнями на кнопки start, stop і
+              на розмітку.
+            </li>
+            <li>
+              Пишемо функцію getTimeComponents, яка отримує число мілісекунд з
+              1.01.1970 і повертає дату в потрібному нам форматі
+            </li>
+            <li>
+              Пишемо об'єкт timer з методом start() в якому ініціалізуємо змінну
+              startTime в яку кладемо Date.now(), додаємо setInterval, в якому
+              ініціалізуємо змінну currentTime з Date.now(). В змінну deltaTime
+              кладемо startTime - currentTime. В змінну timeComponents кладемо
+              функцію getTimeComponents і передаємо в неї deltaTime
+            </li>
+            <li>
+              Додаємо слухача подій на кнопку Start, в колбек якого кладемо
+              timer.start()
+            </li>
+            <li>
+              Пишемо метод stop() в об'єкт timer, в якому очищуємо інтервал з
+              методу start() - попередньо створивши intervalID: null, присвоюючи
+              в нього setInterval.
+            </li>
+            <li>
+              Додаємо слухача подій на кнопку Stop, в колбек якого кладемо
+              timer.stop()
+            </li>
+            <li>Додаємо логіку зв'язаного запуску - зупинки таймера.</li>
+            <li>
+              Пишемо функцію updateClockFace() в textContent якого перредаємо
+              шаблонну строку з часом.
+            </li>
+            <li>Переписуємо timer на клас Timer</li>
+            <li>Реалізуємо відображення інтерфейсу при першому завантажені.</li>
+          </ol>
+
           <div class="timer">
             <p class="clockface js-clockface"></p>
 
@@ -156,29 +207,29 @@
           <h3>Clock Rysich</h3>
           <div class="calendar">
             <div class="date-style">
-                День тижня:
-                <div class="date-day"> 0</div>
+              День тижня:
+              <div class="date-day">0</div>
             </div>
             <div class="date-style">
-                День місяця:
-                <div class="date"> 0</div>
+              День місяця:
+              <div class="date">0</div>
             </div>
             <div class="date-style">
-                Місяць:
-                <div class="date-month"> 0</div>
+              Місяць:
+              <div class="date-month">0</div>
             </div>
             <div class="date-style">
-                Рік:
-                <div class="date-year"> 0</div>
+              Рік:
+              <div class="date-year">0</div>
             </div>
-        </div>
-        <div class="digital-clock">0</div>
-        <div class="clock">
+          </div>
+          <div class="digital-clock">0</div>
+          <div class="clock">
             <div class="clock-arrow clock-seconds__arrow"></div>
             <div class="clock-arrow clock-minutes__arrow"></div>
             <div class="clock-arrow clock-hours__arrow"></div>
             <div class="clock-center"></div>
-        </div>
+          </div>
         </div>
 
         <!--! -->
